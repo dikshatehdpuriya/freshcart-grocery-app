@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshCart — Grocery Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Fresh<span>Cart</span></div>
+      <div class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="orders.html">My Orders</a>
+        <a href="cart.html" class="cart-link">
+          🛒 Cart <span id="cart-count">0</span>
+        </a>
+        <div id="nav-auth" class="nav-auth"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Fresh groceries, delivered fast</h1>
+    <p class="page-subtitle">Browse our catalog and add items to your cart.</p>
+
+    <!-- ===== SEARCH + CATEGORY FILTER TOOLBAR ===== -->
+    <div class="toolbar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for products (e.g. milk, banana)..."
+      />
+      <div class="category-filters">
+        <button class="category-btn active" data-category="All">All</button>
+        <button class="category-btn" data-category="Fruits">Fruits</button>
+        <button class="category-btn" data-category="Vegetables">Vegetables</button>
+        <button class="category-btn" data-category="Dairy">Dairy</button>
+        <button class="category-btn" data-category="Bakery">Bakery</button>
+      </div>
+    </div>
+
+    <!-- ===== PRODUCT GRID — filled in dynamically by app.js ===== -->
+    <div id="product-grid"></div>
+  </main>
+
+  <!-- products.js MUST load before app.js since app.js uses the PRODUCTS array -->
+  <script src="app.js"></script>
+</body>
+</html>

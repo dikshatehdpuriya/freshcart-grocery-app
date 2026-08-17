@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — FreshCart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Fresh<span>Cart</span></div>
+      <div class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="orders.html">My Orders</a>
+        <a href="cart.html" class="cart-link">
+          🛒 Cart <span id="cart-count">0</span>
+        </a>
+        <div id="nav-auth" class="nav-auth"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Your Cart</h1>
+    <p class="page-subtitle">Review your items before checking out.</p>
+
+    <div class="cart-layout">
+     
+      <div id="cart-items"></div>
+
+      
+      <aside class="summary-card">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Fee</span>
+          <span id="summary-delivery">$0.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="summary-total">$0.00</span>
+        </div>
+        <a href="checkout.html" id="checkout-btn" class="btn btn-primary btn-block">
+          Proceed to Checkout
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

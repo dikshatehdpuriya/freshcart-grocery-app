@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Orders — FreshCart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Fresh<span>Cart</span></div>
+      <div class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="orders.html">My Orders</a>
+        <a href="cart.html" class="cart-link">
+          🛒 Cart <span id="cart-count">0</span>
+        </a>
+        <div id="nav-auth" class="nav-auth"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="page-title">My Orders</h1>
+    <p class="page-subtitle">Your order history, saved locally on this device.</p>
+
+    <!-- Shown right after a successful checkout -->
+    <div id="order-success-banner" class="hidden">
+      ✅ Order <span id="success-order-id"></span> placed successfully! Thank you for shopping with us.
+    </div>
+
+    <!-- ===== ORDER HISTORY — filled in dynamically by app.js ===== -->
+    <div id="orders-list"></div>
+  </main>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

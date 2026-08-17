@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — FreshCart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">Fresh<span>Cart</span></div>
+      <div class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="orders.html">My Orders</a>
+        <a href="cart.html" class="cart-link">
+          🛒 Cart <span id="cart-count">0</span>
+        </a>
+        <div id="nav-auth" class="nav-auth"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="auth-layout">
+      <form id="signup-form" class="form-card auth-card">
+        <h1 class="page-title">Create your account</h1>
+        <p class="page-subtitle">Sign up to start shopping and track your orders.</p>
+
+        <p id="signup-error" class="form-error hidden"></p>
+
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <input type="text" id="signup-name" placeholder="Jane Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" placeholder="jane@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" placeholder="••••••••" required minlength="4" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
